@@ -17,7 +17,7 @@ sub get_pexel_page {
 	my $ua = LWP::UserAgent->new();
 	$ua->agent("Unoff");
 	my $get_res = $ua->request($get_req);
-	return $get_res->as_string;
+	return $get_res->content;
 }
 
 sub pexel_first_asurl {
